@@ -15,6 +15,7 @@ namespace Mission14_nj236API.Controllers
         {
             return context.Movies
                 .Where(x => x.Edited == "Yes")
+                .OrderBy(x => x.Title)
                 .ToArray();
         }
     }
